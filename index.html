@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7e383bb6e1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="user">
+            <div class="user__content">
+              <div class="user__name">Динар<br />Шафиков</div>
+              <div class="user__prof">
+                Frontend-разработчик - стажер
+              </div>
+            </div>
+          </div>
+
+          <nav class="nav" id="nav">
+            <a class="nav__link" href="#works">работы</a>
+            <a class="nav__link" href="#about">обо мне</a>
+            <a class="nav__link" href="#reviews">отзывы</a>
+            <a class="nav__link" href="#news">блог</a>
+            <a
+              class="nav__link nav__link--btn"
+              href=""
+              data-modal="#modal_hire_me"
+            >
+              связаться со мной
+            </a>
+          </nav>
+
+          <button class="burger" type="button" id="navToggle">
+            <img class="burger__icon" src="img/menu.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <div class="intro__content">
+            <h2 class="intro__subtitle">Привет, меня зовут</h2>
+            <h1 class="intro__title">Динар Шафиков</h1>
+            <div class="intro__text">Frontend-разработчик - стажер</div>
+
+            <div class="social">
+              <a class="social__link" href="https://vk.com/id35286640">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a class="social__link" href="https://github.com/parkerdi12">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="social__link" href="https://www.instagram.com/?hl=de">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                class="social__link"
+                href="https://www.facebook.com/dinar.parker.1"
+              >
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </div>
+
+            <a class="btn" href="" data-modal="#modal_hire_me"
+              >Связаться со мной</a
+            >
+            <button class="btn" type="button" data-modal="#modal_resume">
+              Посмотреть мое резюме
+            </button>
+          </div>
+          <img class="intro__photo" src="img/photo.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+
+    <div class="works" id="works">
+      <div class="container">
+        <h4 class="works__title">мои проекты</h4>
+        <div class="works__nav">
+          <a class="works__nav--link" href="#" data-filter="all">All</a>
+          <a class="works__nav--link" href="#" data-filter="app">App</a>
+          <a class="works__nav--link" href="#" data-filter="website">Website</a>
+          <a class="works__nav--link" href="#" data-filter="interaction"
+            >Interaction</a
+          >
+        </div>
+
+        <div class="portfolio">
+          <div class="portfolio__col" data-cat="website">
+            <div class="work" data-modal="#modal_project_1">
+              <img class="work__image" src="img/mogo.jpg" alt="" />
+              <div class="work__content">
+                <div class="work__cat">category: website</div>
+                <div class="work__title">
+                  MoGo
+                  <time class="work__date" datetime="2020-05-18 19:00"
+                    >2020</time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio__col" data-cat="website">
+            <div class="work" data-modal="#modal_project_2">
+              <img
+                class="work__image"
+                src="img/fashionmain.png"
+                alt=""
+              />
+              <div class="work__content">
+                <div class="work__cat">category: website</div>
+                <div class="work__title">
+                  Fashion blog
+                  <time class="work__date" datetime="2020-05-18 19:00"
+                    >2020</time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio__col" data-cat="website">
+            <div class="work" data-modal="#modal_project_3">
+              <img
+                class="work__image"
+                src="img/mamonmain.png"
+                alt=""
+              />
+              <div class="work__content">
+                <div class="work__cat">category: website</div>
+                <div class="work__title">
+                  Mamon
+                  <time class="work__date" datetime="2020-05-18 19:00"
+                    >2020</time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__photo">
+            <img class="img" src="img/myphotomain.jpg" alt="" />
+          </div>
+          <div class="about__content">
+            <h3 class="about__title">обо мне</h3>
+            <h2 class="about__bigtitle">кто я</h2>
+            <div class="about__text">
+              <p>
+                Привет! Меня зовут Динар, мне 23 года и я начинающий Front-end
+                разработчик, имею начальные знания в рамках специальности, но не
+                имею опыта. Хочу устроиться в вашу компанию на стажировку с
+                дальнейшим трудоустройством в штат. На данный момент я уже успел
+                сверстать несколько сайтов на основе дизайн-макетов из
+                Photoshop, Figma и Above XD используя редактор кода Visual
+                Studio code. Имею навыки привязки к пользовательскому интерфейсу
+                скриптов, которые обеспечивают визуализацию и анимацию страниц
+                сайта. Умею работать в режиме многозадачности и высокие
+                аналитические способности позволяют мне эффективно работать с
+                большими объёмами информации, быстро находить качественные
+                решения сложных задач. Имею опыт работы под давлением и в
+                течении ограниченного времени. Всегда нацелен на изучение новых
+                технологий. Рассматриваю стажировку преимущественно на полный
+                рабочий день. От стажировки жду получение практических знаний в
+                процессе выполнения реальных задач на боевых проектах в сфере
+                Front-end разработки работая под началом опытных коллег. Очень
+                хочу освоить тонкости профессии, специфику работы в IT-компании
+                и утвердиться в правильности выбранного пути!
+              </p>
+            </div>
+            <a class="btn" href="" data-modal="#modal_hire_me"
+              >Связаться со мной</a
+            >
+            <button class="btn" type="button" data-modal="#modal_resume">
+              Посмотреть мое резюме
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <div class="reviews" id="reviews">
+      <div class="container">
+        <div class="reviews__item">
+          <div class="reviews__text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              pellentesque eu enim eget luctus. Sed augue felis, facilisis et
+              elementum vitae, aliquam sit amet ante. Sed iaculis eros sem,
+              elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum
+              quis tempus dictum.
+            </p>
+          </div>
+          <div class="reviews__author">
+            <img
+              class="reviews__photo"
+              src="https://placehold.it/103/333"
+              alt=""
+            />
+            <div class="reviews__name">Edward M. Brooks</div>
+            <div class="reviews__company">Marketing House</div>
+            <div class="reviews__rating">
+              <img
+                class="reviews__star"
+                src="img/star.svg"
+                width="13"
+                height="13"
+                alt=""
+              />
+              <img
+                class="reviews__star"
+                src="img/star.svg"
+                width="13"
+                height="13"
+                alt=""
+              />
+              <img
+                class="reviews__star"
+                src="img/star.svg"
+                width="13"
+                height="13"
+                alt=""
+              />
+              <img
+                class="reviews__star"
+                src="img/star.svg"
+                width="13"
+                height="13"
+                alt=""
+              />
+              <img
+                class="reviews__star reviews__star--unactive"
+                src="img/star.svg"
+                width="13"
+                height="13"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- News -->
+    <section class="news" id="news">
+      <div class="container">
+        <div class="news__header">
+          <h3 class="news__title">read me</h3>
+          <div class="news__text">Sometimes i write something smart</div>
+        </div>
+
+        <div class="articles">
+          <div class="articles__col">
+            <div class="articles__item">
+              <div class="articles__header">
+                <time class="articles__date"> 10<br />june </time>
+                <a href="">
+                  <img
+                    class="articles__photo"
+                    src="https://placehold.it/370x257"
+                    alt=""
+                /></a>
+              </div>
+              <div class="articles__content">
+                <h4 class="articles__title">
+                  <a href="">TEN THE BEST APP IN 2017</a>
+                </h4>
+                <div class="articles__cat">CATEGORY</div>
+                <div class="articles__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas pellentesque eu enim eget luctus. Sed augue felis,
+                    facilisis et elementum vitae, aliquam sit amet ante. Sed
+                    iaculis eros sem, elementum
+                  </p>
+                </div>
+              </div>
+              <a class="btn btn--sm" href="">read more</a>
+            </div>
+          </div>
+          <div class="articles__col">
+            <div class="articles__item">
+              <div class="articles__header">
+                <time class="articles__date"> 10<br />june </time>
+                <a href="">
+                  <img
+                    class="articles__photo"
+                    src="https://placehold.it/370x257"
+                    alt=""
+                /></a>
+              </div>
+              <div class="articles__content">
+                <h4 class="articles__title">
+                  <a href="">TEN THE BEST APP IN 2017</a>
+                </h4>
+                <div class="articles__cat">CATEGORY</div>
+                <div class="articles__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas pellentesque eu enim eget luctus. Sed augue felis,
+                    facilisis et elementum vitae, aliquam sit amet ante. Sed
+                    iaculis eros sem, elementum
+                  </p>
+                </div>
+              </div>
+              <a class="btn btn--sm" href="">read more</a>
+            </div>
+          </div>
+          <div class="articles__col">
+            <div class="articles__item">
+              <div class="articles__header">
+                <time class="articles__date"> 10<br />june </time>
+                <a href="">
+                  <img
+                    class="articles__photo"
+                    src="https://placehold.it/370x257"
+                    alt=""
+                /></a>
+              </div>
+              <div class="articles__content">
+                <h4 class="articles__title">
+                  <a href="">TEN THE BEST APP IN 2017</a>
+                </h4>
+                <div class="articles__cat">CATEGORY</div>
+                <div class="articles__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas pellentesque eu enim eget luctus. Sed augue felis,
+                    facilisis et elementum vitae, aliquam sit amet ante. Sed
+                    iaculis eros sem, elementum
+                  </p>
+                </div>
+              </div>
+              <a class="btn btn--sm" href="">read more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news__footer">
+          <a class="news__link" href="">See more posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__credits">
+            <div class="footer__copyright"></div>
+            <div class="footer__social">
+              <a class="social__link" href="https://vk.com/id35286640">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a class="social__link" href="https://github.com/parkerdi12">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="social__link" href="https://www.instagram.com/?hl=de">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                class="social__link"
+                href="https://www.facebook.com/dinar.parker.1"
+              >
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <nav class="footer__nav">
+            <a class="footer__nav-link" href="">Работы</a>
+            <a class="footer__nav-link" href="">Обо мне</a>
+            <a class="footer__nav-link" href="">Блог</a>
+            <a class="footer__nav-link" href="">Контакты</a>
+            <a
+              class="footer__nav-link footer__nav-link--btn"
+              href=""
+              data-modal="#modal_hire_me"
+              >Связаться со мной</a
+            >
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals  -->
+
+    <div class="modal" id="modal_project_1">
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close="">
+          <img src="img/modal-close.svg" alt="Close" />
+        </button>
+        <div class="modal-work">
+          <div class="modal-work__preview">
+            <div data-slider="slick">
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="img/mogo.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="img/mogo2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-work__content">
+            <div class="modal-work__header">
+              <h3 class="modal-work__title">MoGo</h3>
+              <div class="modal-work__info">
+                website <span class="modal-work__info-divider">|</span> 2020
+              </div>
+            </div>
+            <div class="modal-work__client">
+              <div class="modal-work__client-title">Client:</div>
+              <div class="modal-work__client-company">Creative Agency</div>
+            </div>
+            <div class="modal-work__text">
+              <p>
+                MoGo: Free one page PSD template <br />
+                PSD шаблон MoGo лучше всего подходит для агентств и отличается
+                чистым и современным дизайном. Он включает в себя множество
+                полезных компонентов, таких как аккордеоны, миниатюры портфолио,
+                отзывы карусели и другие виджеты. Также данный вебсайт полностью
+                мной адаптирован под другие разршения экрана.
+
+                <br> <a href="https://parkerdi12.github.io/MoGo-PSD/">Ссылка на GitHub Pages</a>
+              </p>
+            </div>
+
+            <div class="modal-work__fotter">
+              <button class="modal-work__btn slickPrev" type="button">
+                <img src="img/back.svg" height="12" alt="" />
+                НАЗАД
+              </button>
+              <button class="modal-work__btn slickNext" type="button">
+                ВПЕРЕД
+                <img src="img/next.svg" height="12" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-work__content -->
+        </div>
+        <!-- /.modal-work -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal" id="modal_project_2">
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close="">
+          <img src="img/modal-close.svg" alt="Close" />
+        </button>
+        <div class="modal-work">
+          <div class="modal-work__preview">
+            <div data-slider="slick">
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="img/fashionscreen1.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="img/fashionscreen2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-work__content">
+            <div class="modal-work__header">
+              <h3 class="modal-work__title">Fashion blog</h3>
+              <div class="modal-work__info">
+                website <span class="modal-work__info-divider">|</span> 2020
+              </div>
+            </div>
+            <div class="modal-work__client">
+              <div class="modal-work__client-title">Client:</div>
+              <div class="modal-work__client-company">Creative Agency</div>
+            </div>
+            <div class="modal-work__text">
+              <p>
+                Fashion blog template
+
+                <br> <a href="https://parkerdi12.github.io/Fashion/">Ссылка на GitHub Pages</a>
+              </p>
+            </div>
+
+            <div class="modal-work__fotter">
+              <button class="modal-work__btn slickPrev" type="button">
+                <img src="img/back.svg" height="12" alt="" />
+                НАЗАД
+              </button>
+              <button class="modal-work__btn slickNext" type="button">
+                ВПЕРЕД
+                <img src="img/next.svg" height="12" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-work__content -->
+        </div>
+        <!-- /.modal-work -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal" id="modal_project_3">
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close="">
+          <img src="img/modal-close.svg" alt="Close" />
+        </button>
+        <div class="modal-work">
+          <div class="modal-work__preview">
+            <div data-slider="slick">
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="img/mamon1.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="img/mamon2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-work__content">
+            <div class="modal-work__header">
+              <h3 class="modal-work__title">Mamon</h3>
+              <div class="modal-work__info">
+                website <span class="modal-work__info-divider">|</span> 2020
+              </div>
+            </div>
+            <div class="modal-work__client">
+              <div class="modal-work__client-title">Client:</div>
+              <div class="modal-work__client-company">Creative Agency</div>
+            </div>
+            <div class="modal-work__text">
+              <p>
+                Mamon - development agency
+
+                <br> <a href="https://parkerdi12.github.io/Mamon-Template-Figma/">Ссылка на GitHub Pages</a>
+              </p>
+            </div>
+
+            <div class="modal-work__fotter">
+              <button class="modal-work__btn slickPrev" type="button">
+                <img src="img/back.svg" height="12" alt="" />
+                PREVIOUS
+              </button>
+              <button class="modal-work__btn slickNext" type="button">
+                NEXT
+                <img src="img/next.svg" height="12" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-work__content -->
+        </div>
+        <!-- /.modal-work -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal" id="modal_resume">
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close="">
+          <img src="img/modal-close.svg" alt="Close" />
+        </button>
+
+        <div class="modal__content">
+          <h3 class="modal__title text-center">РЕЗЮМЕ</h3>
+
+          <div class="text-center">
+            <a
+              download=""
+              class="btn btn--thin"
+              href="https://drive.google.com/file/d/1zV1a004N1QZXQoyR4_C6wVE4gx-b62VD/view?usp=sharing"
+              >СКАЧАТЬ В PDF</a
+            >
+            <a class="btn btn--thin" href="">ПЕЧАТЬ</a>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__col timeline__col--left">
+              <h4 class="timeline__title">Краткие сведения</h4>
+
+              <div class="timeline__item">
+                <div class="timeline__text">
+                  <p>
+                    • Дата рождения: 02.11.1996г. <br />
+                    • Контактный номер: 8 (912) 453-46-35.<br />
+                    • E-mail: shafickovd@yandex.ru<br />
+                    • Github: https://github.com/parkerdi12
+                  </p>
+                </div>
+              </div>
+
+              <h4 class="timeline__title">КЛЮЧЕВЫЕ НАВЫКИ</h4>
+              <div class="timeline__item">
+                <div class="timeline__text">
+                  <p>
+                    • Уверенные знания HTML5, CSS3. <br />
+                    • Понимание принципов семантичекой верстки.<br />
+                    • Знаком с методологией БЭМ.<br />
+                    • Есть опыт Адаптивной верстки.<br />
+                    • Основы JS, на уровне работы с JQuery и браузерным API.<br />
+                    • Умение работать с системами контроля версий: Git,
+                    Github.<br />
+                    • Есть опыт работы с CSS-препроцессором Less.<br />
+                    • Есть опыт работы с Photoshop, Figma, Above XD.<br />
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">О СЕБЕ</h5>
+                <div class="timeline__text">
+                  <p>
+                    Нацелен на результат и постоянный рост. Постоянное
+                    стремление к совершенствованию знаний. Имею хорошие
+                    коммуникативные навыки. Аналитический склад ума. Умею
+                    аргументированно отстаивать свою точку зрения. Веду активный
+                    образ жизни. Занимаюсь спортом. Вредных привычек не имею.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">ЯЗЫКИ</h5>
+                <div class="timeline__text">
+                  <p>
+                    • Английский: читаю и перевожу (уровень A1).
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">
+                  Цели и предпочтительные условия работы:
+                </h5>
+                <div class="timeline__text">
+                  <p>
+                    Стажировка на полный рабочий день (без какого-либо порога по
+                    времени, возможность работы в выходные дни по
+                    договоренности). Получение практических знаний в сфере
+                    Front-end разработки на действующих проектах работая под
+                    началом опытных коллег.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline__col timeline__col--right">
+              <h4 class="timeline__title">ОБРАЗОВАНИЕ</h4>
+
+              <div class="timeline__item">
+                <div class="timeline__date">2013 - 2016</div>
+                <div class="timeline__position">
+                  Среднее профессиональное ВГУЮ (ИФ) (бывш. ИФ РПА МЮ РФ)
+                  2013-2016 гг., квалификация: юрист, (специальность Право
+                  социального обеспечения).
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__date">2016г. – по н.в..</div>
+                <div class="timeline__position">
+                  ФГБОУ ВО «Удмуртский государственный университет». 2016-2021
+                  гг., квалификация: юрист, (специальность Правовое обеспечение
+                  национальной безопасности, очная форма обучения – 5 лет,
+                  специалитет).
+                </div>
+              </div>
+            </div>
+            <!-- /.timeline__col -->
+          </div>
+          <!-- /.timeline -->
+
+          <div class="text-center">
+            <a class="btn" href="" data-modal="#modal_hire_me"
+              >СВЯЗАТЬСЯ СО МНОЙ</a
+            >
+          </div>
+        </div>
+        <!-- /.modal__content -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal" id="modal_hire_me">
+      <div class="modal__dialog modal__dialog--sm">
+        <button class="modal__close" type="button" data-close="">
+          <img src="img/modal-close.svg" alt="Close" />
+        </button>
+
+        <div class="contact">
+          <div class="contact__left">
+            <h3 class="modal__title mb-0">ДАВАЙ ПОГОВОРИМ!</h3>
+            <div class="modal__subtitle">
+              Позвони мне или отправь мне письмо
+            </div>
+
+            <ul class="contact__info">
+              <li class="contact__info-item">
+                <img class="contact__info-icon" src="img/phone.svg" alt="" />
+                +7 912 453 46 35
+              </li>
+              <li class="contact__info-item">
+                <img class="contact__info-icon" src="img/message.svg" alt="" />
+                shafickovd@yandex.ru
+              </li>
+            </ul>
+
+            <form class="form" action="" method="POST">
+              <div class="form__group">
+                <label for="input-email" class="form__label"
+                  >Адрес e-mail</label
+                >
+                <input
+                  name="input-email"
+                  type="text"
+                  class="form__input"
+                  id="input-email"
+                  placeholder="Твой e-mail"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="input-text" class="form__label">Письмо</label>
+                <textarea
+                  class="form__textarea"
+                  name="input-text"
+                  id="input-text"
+                  placeholder="Твой вопрос ..."
+                ></textarea>
+              </div>
+
+              <div class="text-right">
+                <button class="btn" type="submit">ОТПРАВИТЬ</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.contact__left -->
+        </div>
+        <!-- /.contact -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal-->
+
+    <!-- JS -->
+
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
